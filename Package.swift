@@ -3,8 +3,6 @@
 import Foundation
 import PackageDescription
 
-var sources = ["src/parser.c", "src/scanner.c"]
-
 let package = Package(
     name: "TreeSitterPython",
     products: [
@@ -18,7 +16,7 @@ let package = Package(
             name: "TreeSitterPython",
             dependencies: [],
             path: ".",
-            sources: sources,
+            sources: ["src/parser.c", "src/scanner.c"],
             resources: [
                 .copy("queries")
             ],
